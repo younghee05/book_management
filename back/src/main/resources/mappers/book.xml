@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.book.repository.BookMapper">
+
+<!--    책 정보 추가 -->
+    <insert id="createBook">
+        insert into book_tb(book_id, title, content, author, bookImg, create_at)
+            values(
+                0, #{title}, #{content}, #{author}, #{bookImg}, now()
+            )
+    </insert>
+
+</mapper>
