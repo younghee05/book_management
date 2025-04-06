@@ -1,5 +1,6 @@
 package com.study.book.entity;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

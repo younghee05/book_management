@@ -22,19 +22,7 @@ import { storage } from '../../firebase/firebase';
 
 */
 
-function BookCreateModal({ isOpen, onClose }) {
-
-    // 추가할 책 정보를 담는 상태 
-    const [ books, setBooks ] = useState({
-        
-        title: "",
-        content: "",
-        author: "",
-        genreId: 1,
-        publisher: "",
-        bookImg: ""
-
-    });
+function BookCreateModal({ isOpen, onClose, books, setBooks }) {
 
     // 이미지 업로드 상태 관리 기본 상태를 false로 지정 
     // const [ imgUpload, setImgUpload ] = useState(false);

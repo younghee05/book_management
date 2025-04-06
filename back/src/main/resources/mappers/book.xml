@@ -6,10 +6,11 @@
 
 <!--    책 정보 추가 -->
     <insert id="createBook">
-        insert into book_tb(book_id, title, content, author, bookImg, create_at)
+        insert into book_tb(book_id, title, content, author, genre_id, publisher, bookImg, create_at)
             values(
-                0, #{title}, #{content}, #{author}, #{bookImg}, now()
+                0, #{title}, #{content}, #{author}, #{genreId}, #{publisher}, #{bookImg}, now()
             )
     </insert>
+
 
 </mapper>
