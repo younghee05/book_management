@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 /** @jsxImportSource @emotion/react */
 import * as s from "./style";
+import { useQuery } from '@tanstack/react-query';
 
 function MainPage(props) {
 
@@ -10,18 +11,12 @@ function MainPage(props) {
     // 도서정보를 가지고 오는 쿼리
     // const bookListQuery = useQuery(
     //     ["books"],
-    //     async () => {
-    //         return await instance.get("/bookList");
-    //     },
+    //     async () => await instance.get("/book/get"),
     //     {
-    //         retry: 0,
-    //         onSuccess: (response) => {
-    //             setBookList(response.data);
-    //         }
+    //         retry: 0
     //     }
 
-    // )
-
+    // );
     
     return (
         <div css={s.layout}>

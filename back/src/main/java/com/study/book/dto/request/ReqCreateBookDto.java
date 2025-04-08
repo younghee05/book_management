@@ -1,7 +1,6 @@
-package com.study.book.dto;
+package com.study.book.dto.request;
 
 import com.study.book.entity.Book;
-import lombok.Builder;
 import lombok.Data;
 
 /*

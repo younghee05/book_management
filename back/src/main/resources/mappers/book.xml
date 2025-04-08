@@ -6,11 +6,29 @@
 
 <!--    책 정보 추가 -->
     <insert id="createBook">
-        insert into book_tb(book_id, title, content, author, genre_id, publisher, bookImg, create_at)
+        insert into book_tb(book_id, title, content, author, genre_id, publisher, book_img, create_at)
             values(
                 0, #{title}, #{content}, #{author}, #{genreId}, #{publisher}, #{bookImg}, now()
             )
     </insert>
+
+    <!-- 책 정보 조회 -->
+    <select id="loadBooks" resultType="com.study.book.entity.Book">
+
+        select
+            b.book_id as bookId,
+            b.title,
+            b.author,
+            g.genre,
+            b.publisher,
+            b.book_img as bookImg,
+            b.create_at as createAt
+        from
+            book_tb b
+            left outer join genre_tb g on(g.genre_id = b.genre_id) <!-- 장르테이블 안에 장르이름 불러오기 위함 -->
+        order by createAt DESC
+
+    </select>
 
 
 </mapper>
