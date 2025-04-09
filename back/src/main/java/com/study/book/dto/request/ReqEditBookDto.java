@@ -1,10 +1,8 @@
 package com.study.book.dto.request;
 
 import com.study.book.entity.Book;
-import lombok.Builder;
 import lombok.Data;
 
-@Builder
 @Data
 public class ReqEditBookDto {
 
@@ -15,6 +13,7 @@ public class ReqEditBookDto {
     private int genreId;
     private String publisher;
     private String bookImg;
+    private String createAt;
 
     public Book toEditBook() {
         return Book.builder()
@@ -25,6 +24,7 @@ public class ReqEditBookDto {
                 .genreId(genreId)
                 .publisher(publisher)
                 .bookImg(bookImg)
+                .createAt(createAt)
                 .build();
     }
 

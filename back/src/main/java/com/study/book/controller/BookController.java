@@ -33,10 +33,17 @@ public class BookController {
     }
 
     // 책 정보 수정
-    @PutMapping("/edit")
+    @PutMapping("/edit/{bookId}")
     public ResponseEntity<?> editBook(@RequestBody ReqEditBookDto dto) {
 
         return ResponseEntity.ok().body(bookService.editBook(dto));
+    }
+
+    // 책 정보 삭제
+    @DeleteMapping("/delete/{bookId}")
+    public ResponseEntity<?> deleteBook(@PathVariable Long bookId) {
+
+        return ResponseEntity.ok().body(bookService.deleteBook(bookId));
     }
 
 }

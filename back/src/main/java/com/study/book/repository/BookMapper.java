@@ -14,4 +14,6 @@ public interface BookMapper {
 
     int editBook(Book book);
 
+    int deleteBook(Long bookId);
+
 }

@@ -42,4 +42,8 @@ public class BookService {
         return bookMapper.editBook(dto.toEditBook());
     }
 
+    public int deleteBook(Long bookId) {
+        return bookMapper.deleteBook(bookId);
+    }
+
 }

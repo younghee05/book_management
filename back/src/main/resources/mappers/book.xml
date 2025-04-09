@@ -22,10 +22,20 @@
             author = #{author},
             genre_id = #{genreId},
             publisher = #{publisher},
-            book_img = #{bookImg}
+            book_img = #{bookImg},
+            create_at = #{createAt}
         where
-            bookId = #{bookId}
+            book_id = #{bookId}
     </update>
+    <delete id="deleteBook">
+
+        delete
+        from
+            book_tb
+        where
+            book_id = #{bookId}
+
+    </delete>
 
     <!-- 책 정보 조회 -->
     <select id="loadBooks" resultType="com.study.book.entity.Book">
