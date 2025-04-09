@@ -12,4 +12,6 @@ public interface BookMapper {
 
     List<Book> loadBooks();
 
+    int editBook(Book book);
+
 }

@@ -12,6 +12,21 @@
             )
     </insert>
 
+    <!-- 책 정보 수정 -->
+    <update id="editBook">
+        update
+            book_tb
+        set
+            title = #{title},
+            content = #{content},
+            author = #{author},
+            genre_id = #{genreId},
+            publisher = #{publisher},
+            book_img = #{bookImg}
+        where
+            bookId = #{bookId}
+    </update>
+
     <!-- 책 정보 조회 -->
     <select id="loadBooks" resultType="com.study.book.entity.Book">
 

@@ -1,6 +1,7 @@
 package com.study.book.service;
 
 import com.study.book.dto.request.ReqCreateBookDto;
+import com.study.book.dto.request.ReqEditBookDto;
 import com.study.book.dto.response.RespLoadBookDto;
 import com.study.book.entity.Book;
 import com.study.book.repository.BookMapper;
@@ -35,6 +36,10 @@ public class BookService {
 
         return bookDtoList;
 
+    }
+
+    public int editBook(ReqEditBookDto dto) {
+        return bookMapper.editBook(dto.toEditBook());
     }
 
 }
